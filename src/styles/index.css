@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,600;0,6..12,800;1,6..12,300;1,6..12,600;1,6..12,800&display=swap");
+
+:root {
+  --neutral-dm-dark-blue: 209, 23%, 22%;
+  --neutral-dm-very-dark-blue: 207, 26%, 17%;
+  --neutral-lm-very-darkblue: 200, 15%, 8%;
+  --neutral-lm-dark-gray: 0, 0%, 52%;
+  --neutral-lm-very-light-gray: 0, 0%, 98%;
+  --neutral-white: 0, 0%, 100%;
+  --homepage-fs: 14px;
+  --details-page-fs: 16px;
+  --main-fs: "Nunito Sans", sans-serif;
+  --fw-thin: 300;
+  --fw-semibold: 600;
+  --fw-bold: 800;
+}
