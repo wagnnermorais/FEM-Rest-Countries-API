@@ -1,0 +1,13 @@
+.main-button {
+  margin: 1rem 0;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: var(--fw-semibold);
+  transition: 0.45s;
+  cursor: pointer;
+}
+
+.main-button:hover {
+  background: #d3d2d2;
+}

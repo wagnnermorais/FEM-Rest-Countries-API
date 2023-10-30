@@ -1,0 +1,15 @@
+.theme-box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.theme-box:hover {
+  color: #453e3e;
+}
+
+.theme-box p {
+  font-weight: var(--fw-bold);
+}

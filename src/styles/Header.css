@@ -1,0 +1,13 @@
+.main-header {
+  padding: 2rem 0;
+  width: 100%;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.125);
+  margin-bottom: 0.125rem;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 1440px;
+  margin: 0 auto;
+}

@@ -1,0 +1,26 @@
+.country-box {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.125);
+  min-height: 375px;
+  background: hsl(var(--neutral-white));
+}
+
+.flag-box img {
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+}
+
+.country-data {
+  padding: 1rem;
+}
+
+.country-data-p {
+  font-weight: var(--fw-bold);
+}
+
+.data {
+  font-weight: var(--fw-thin);
+}
