@@ -14,3 +14,10 @@
   --fw-semibold: 600;
   --fw-bold: 800;
 }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--main-fs);
+}
