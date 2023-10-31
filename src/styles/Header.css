@@ -1,8 +1,9 @@
 .main-header {
   padding: 2rem 0;
   width: 100%;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: var(--main-bs);
   margin-bottom: 0.125rem;
+  background: hsl(var(--neutral-white));
 }
 
 .header-wrapper {

@@ -13,6 +13,7 @@
   --fw-thin: 300;
   --fw-semibold: 600;
   --fw-bold: 800;
+  --main-bs: 1px 2px 5px rgba(0, 0, 0, 0.1525);
 }
 
 * {

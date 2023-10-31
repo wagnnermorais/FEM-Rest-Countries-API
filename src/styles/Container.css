@@ -3,7 +3,7 @@
   flex-direction: column;
   border: none;
   border-radius: 10px;
-  box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: var(--main-bs);
   min-height: 375px;
   background: hsl(var(--neutral-white));
 }
