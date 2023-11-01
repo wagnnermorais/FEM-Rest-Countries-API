@@ -1,11 +1,13 @@
 import Header from "../components/Header";
 import Button from "../components/Button";
 import Container from "../components/Container";
-import "../styles/Home.css";
+import Filter from "../components/Filter";
 import countries from "../../db/data.json";
+import { useState } from "react";
 import { useLoadCountries } from "../hooks/useLoadCountries";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "../styles/Home.css";
 
 const Home = () => {
   const { visibleRows, handleLoadMore, handleLoadLess } = useLoadCountries(2);
@@ -26,16 +28,10 @@ const Home = () => {
           />
         </div>
         <div className="filter">
-          <p>Filter by Region</p>
-          <div className="list">
-            <ul className="filter">
-              <li className="filter-list-item">Africa</li>
-              <li className="filter-list-item">America</li>
-              <li className="filter-list-item">Asia</li>
-              <li className="filter-list-item">Europe</li>
-              <li className="filter-list-item">Oceania</li>
-            </ul>
-          </div>
+          <Filter
+            title={"Filter by Region"}
+            items={["Africa", "America", "Asia", "Europe", "Oceania"]}
+          />
         </div>
       </div>
       <div className="countries-container">
