@@ -1,0 +1,51 @@
+.title {
+  display: flex;
+  align-items: center;
+  margin: 2rem 0 0.75rem;
+  padding: 1rem 1.25rem;
+  gap: 2.5rem;
+  border: none;
+  border-radius: 5px;
+  background: hsl(var(--neutral-white));
+  box-shadow: var(--main-bs);
+  cursor: pointer;
+}
+
+.filter-box {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.85s ease-in-out;
+}
+
+.filter-box.open {
+  max-height: 500px;
+}
+
+.filter-title {
+  font-size: 14px;
+  font-weight: var(--fw-semibold);
+}
+
+.filter-list {
+  padding: 1rem 1.25rem;
+  border: none;
+  border-radius: 5px;
+  background: hsl(var(--neutral-white));
+  box-shadow: var(--main-bs);
+}
+
+.filter-list-item {
+  font-size: 14px;
+  margin: 0.5rem 0;
+  font-weight: var(--fw-semibold);
+  list-style: none;
+  transition: 0.25s;
+}
+
+.filter-list-item:hover {
+  transform: scale(1.1);
+}
+
+.filter-list-item:last-child {
+  margin: 0.5rem 0 0;
+}
