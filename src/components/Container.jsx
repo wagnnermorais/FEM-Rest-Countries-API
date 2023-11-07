@@ -7,7 +7,7 @@ const Container = ({ flag, alt, title, population, region, capital }) => {
         <img src={flag} alt={alt} width={250} height={200} />
       </div>
       <div className="country-data">
-        <h3>{title}</h3>
+        <h3 className="country-data-title">{title}</h3>
         <p className="country-data-p">
           Population: <span className="data">{population}</span>
         </p>
