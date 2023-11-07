@@ -8,6 +8,7 @@ import { useLoadCountries } from "../hooks/useLoadCountries";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../styles/Home.css";
+import PageUp from "../components/PageUp";
 
 const Home = () => {
   const { visibleRows, handleLoadMore, handleLoadLess } = useLoadCountries(2);
@@ -23,42 +24,44 @@ const Home = () => {
     >
       <Header toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
       <div className="input-box home-wrapper">
-        <div className="search-input-box">
-          {isDarkMode ? (
-            <div className="search-input">
-              <FontAwesomeIcon
-                icon={faMagnifyingGlass}
-                size="xl"
-                color="hsl(var(--neutral-white)"
-                className="mag-icon"
-              />
-              <input
-                type="text"
-                placeholder="Search for a country..."
-                className="s-dark-input"
-              />
-            </div>
-          ) : (
-            <div className="search-input">
-              <FontAwesomeIcon
-                icon={faMagnifyingGlass}
-                size="xl"
-                color="hsl(var(--neutral-lm-dark-gray)"
-                className="mag-icon"
-              />
-              <input
-                type="text"
-                placeholder="Search for a country..."
-                className="s-light-input"
-              />
-            </div>
-          )}
-        </div>
-        <div className="filter">
-          <Filter
-            title={"Filter by Region"}
-            items={["Africa", "America", "Asia", "Europe", "Oceania"]}
-          />
+        <div className="filters-box">
+          <div className="search-input-box">
+            {isDarkMode ? (
+              <div className="search-input">
+                <FontAwesomeIcon
+                  icon={faMagnifyingGlass}
+                  size="xl"
+                  color="hsl(var(--neutral-white)"
+                  className="mag-icon"
+                />
+                <input
+                  type="text"
+                  placeholder="Search for a country..."
+                  className="s-dark-input"
+                />
+              </div>
+            ) : (
+              <div className="search-input">
+                <FontAwesomeIcon
+                  icon={faMagnifyingGlass}
+                  size="xl"
+                  color="hsl(var(--neutral-lm-dark-gray)"
+                  className="mag-icon"
+                />
+                <input
+                  type="text"
+                  placeholder="Search for a country..."
+                  className="s-light-input"
+                />
+              </div>
+            )}
+          </div>
+          <div className="filter">
+            <Filter
+              title={"Filter by Region"}
+              items={["Africa", "America", "Asia", "Europe", "Oceania"]}
+            />
+          </div>
         </div>
         <div className="countries-container">
           <div className="home-wrapper">
@@ -81,6 +84,7 @@ const Home = () => {
         <Button onClick={handleLoadMore} text={"Load more"} />
         <Button onClick={handleLoadLess} text={"Load less"} />
       </div>
+      <PageUp />
     </div>
   );
 };
