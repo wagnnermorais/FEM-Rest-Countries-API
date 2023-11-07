@@ -1,16 +1,31 @@
-.container {
+.dark-mode {
+  min-height: 100vh;
+  background: hsl(var(--neutral-dm-very-dark-blue));
+  color: #fff;
+  transition: var(--main-transition) ease-in-out;
+}
+
+.light-container {
   min-height: 100vh;
   background: hsl(var(--neutral-lm-very-light-gray));
+  transition: var(--main-transition);
+}
+
+.countries-container {
+  position: relative;
 }
 
 .input-box {
   position: relative;
 }
 
+.search-input-box {
+  width: 40%;
+}
+
 .search-input {
   display: flex;
   align-items: center;
-  width: 40%;
 }
 
 .search-input input {
@@ -18,15 +33,30 @@
   padding: 1rem 0 1rem 3rem;
   width: 100%;
   font-size: 16px;
+  font-weight: 700;
   border: none;
   border-radius: 5px;
   outline: none;
   box-shadow: var(--main-bs);
-  transition: 0.25s;
+  transition: var(--main-transition);
 }
 
-.search-input input:hover {
+/* .search-input input:hover {
   background: #e0f4f5;
+} */
+
+.s-light-input,
+.s-light-input::placeholder {
+  color: hsl(var(--neutral-lm-dark-gray));
+}
+
+.s-dark-input {
+  background: hsl(var(--neutral-dm-dark-blue));
+  color: hsl(var(--neutral-lm-very-light-gray));
+}
+
+.s-dark-input::placeholder {
+  color: hsl(var(--neutral-lm-very-light-gray));
 }
 
 .mag-icon {
@@ -42,7 +72,7 @@
   border-radius: 5px;
   outline: none;
   box-shadow: var(--main-bs);
-  transition: 0.25s;
+  transition: var(--main-transition);
   font-weight: var(--fw-semibold);
 }
 
@@ -65,14 +95,14 @@
   max-width: 1440px;
   margin: 0 auto;
   overflow: hidden;
-  transition: all 0.3s;
+  transition: var(--main-transition);
 }
 
 .country-container {
   position: relative;
   width: calc(25% - 46px);
   margin: 8px;
-  transition: all 0.3s;
+  transition: var(--main-transition);
 }
 
 .button-box {

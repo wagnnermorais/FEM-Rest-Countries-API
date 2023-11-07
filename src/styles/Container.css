@@ -24,3 +24,8 @@
 .data {
   font-weight: var(--fw-thin);
 }
+
+.dark-mode .country-box {
+  background: hsl(var(--neutral-dm-dark-blue));
+  color: hsl(var(--neutral-white));
+}

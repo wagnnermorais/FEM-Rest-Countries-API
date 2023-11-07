@@ -1,9 +1,9 @@
 .main-header {
   padding: 2rem 0;
   width: 100%;
+  background: hsl(var(--neutral-white));
   box-shadow: var(--main-bs);
   margin-bottom: 0.125rem;
-  background: hsl(var(--neutral-white));
 }
 
 .header-wrapper {
@@ -11,4 +11,9 @@
   justify-content: space-between;
   width: 1440px;
   margin: 0 auto;
+}
+
+.dark-mode .main-header {
+  background: hsl(var(--neutral-dm-dark-blue));
+  color: hsl(var(--neutral-white));
 }

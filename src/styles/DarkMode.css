@@ -3,11 +3,11 @@
   align-items: center;
   gap: 0.5rem;
   cursor: pointer;
-  transition: 0.25s;
+  transition: var(--main-transition);
 }
 
 .theme-box:hover {
-  color: #453e3e;
+  color: #878383;
 }
 
 .theme-box p {
