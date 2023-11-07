@@ -11,21 +11,48 @@ import "../styles/Home.css";
 
 const Home = () => {
   const { visibleRows, handleLoadMore, handleLoadLess } = useLoadCountries(2);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+
   return (
-    <div className="container">
-      <Header />
+    <div
+      className={`container ${isDarkMode ? "dark-mode" : "light-container"}`}
+    >
+      <Header toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
       <div className="input-box home-wrapper">
-        <div className="search-input">
-          <FontAwesomeIcon
-            icon={faMagnifyingGlass}
-            size="xl"
-            className="mag-icon"
-          />
-          <input
-            type="text"
-            placeholder="Search for a country..."
-            className="s-input"
-          />
+        <div className="search-input-box">
+          {isDarkMode ? (
+            <div className="search-input">
+              <FontAwesomeIcon
+                icon={faMagnifyingGlass}
+                size="xl"
+                color="hsl(var(--neutral-white)"
+                className="mag-icon"
+              />
+              <input
+                type="text"
+                placeholder="Search for a country..."
+                className="s-dark-input"
+              />
+            </div>
+          ) : (
+            <div className="search-input">
+              <FontAwesomeIcon
+                icon={faMagnifyingGlass}
+                size="xl"
+                color="hsl(var(--neutral-lm-dark-gray)"
+                className="mag-icon"
+              />
+              <input
+                type="text"
+                placeholder="Search for a country..."
+                className="s-light-input"
+              />
+            </div>
+          )}
         </div>
         <div className="filter">
           <Filter
@@ -33,21 +60,21 @@ const Home = () => {
             items={["Africa", "America", "Asia", "Europe", "Oceania"]}
           />
         </div>
-      </div>
-      <div className="countries-container">
-        <div className="home-wrapper">
-          {countries.slice(0, visibleRows * 4).map((country) => (
-            <div key={country.name} className="country-container">
-              <Container
-                flag={country.flags.png}
-                alt={`${country.name} Flag`}
-                title={country.name}
-                population={country.population}
-                region={country.region}
-                capital={country.capital}
-              />
-            </div>
-          ))}
+        <div className="countries-container">
+          <div className="home-wrapper">
+            {countries.slice(0, visibleRows * 4).map((country) => (
+              <div key={country.name} className="country-container">
+                <Container
+                  flag={country.flags.png}
+                  alt={`${country.name} Flag`}
+                  title={country.name}
+                  population={country.population}
+                  region={country.region}
+                  capital={country.capital}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
       <div className="button-box">

@@ -1,12 +1,13 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoon } from "@fortawesome/free-regular-svg-icons";
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
+
 import "../styles/DarkMode.css";
 
-const DarkMode = ({ text }) => {
+const DarkMode = ({ text, onClick, isDarkMode }) => {
   return (
-    <div className="theme-box">
-      <FontAwesomeIcon icon={faMoon} size="xl" />
-      <p>{text}</p>
+    <div className="theme-box" onClick={onClick}>
+      <FontAwesomeIcon icon={isDarkMode ? faSun : faMoon} size="xl" />
+      <p>{isDarkMode ? "Light Mode" : text}</p>
     </div>
   );
 };
