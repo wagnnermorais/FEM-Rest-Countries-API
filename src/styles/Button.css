@@ -4,7 +4,7 @@
   border: none;
   border-radius: 5px;
   font-weight: var(--fw-semibold);
-  transition: 0.45s;
+  transition: var(--main-transition);
   cursor: pointer;
 }
 
