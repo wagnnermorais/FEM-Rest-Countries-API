@@ -1,4 +1,292 @@
+
 [
+  {
+    "name": "Germany",
+    "topLevelDomain": [".de"],
+    "alpha2Code": "DE",
+    "alpha3Code": "DEU",
+    "callingCodes": ["49"],
+    "capital": "Berlin",
+    "altSpellings": [
+      "DE",
+      "Federal Republic of Germany",
+      "Bundesrepublik Deutschland"
+    ],
+    "subregion": "Central Europe",
+    "region": "Europe",
+    "population": 83240525,
+    "latlng": [51, 9],
+    "demonym": "German",
+    "area": 357114,
+    "gini": 31.9,
+    "timezones": ["UTC+01:00"],
+    "borders": ["AUT", "BEL", "CZE", "DNK", "FRA", "LUX", "NLD", "POL", "CHE"],
+    "nativeName": "Deutschland",
+    "numericCode": "276",
+    "flags": {
+      "svg": "https://flagcdn.com/de.svg",
+      "png": "https://flagcdn.com/w320/de.png"
+    },
+    "currencies": [
+      {
+        "code": "EUR",
+        "name": "Euro",
+        "symbol": "€"
+      }
+    ],
+    "languages": [
+      {
+        "iso639_1": "de",
+        "iso639_2": "deu",
+        "name": "German",
+        "nativeName": "Deutsch"
+      }
+    ],
+    "translations": {
+      "br": "Alamagn",
+      "pt": "Alemanha",
+      "nl": "Duitsland",
+      "hr": "Njemačka",
+      "fa": "آلمان",
+      "de": "Deutschland",
+      "es": "Alemania",
+      "fr": "Allemagne",
+      "ja": "ドイツ",
+      "it": "Germania",
+      "hu": "Grúzia"
+    },
+    "flag": "https://flagcdn.com/de.svg",
+    "regionalBlocs": [
+      {
+        "acronym": "EU",
+        "name": "European Union"
+      }
+    ],
+    "cioc": "GER",
+    "independent": true
+  },
+  {
+    "name": "United States of America",
+    "topLevelDomain": [".us"],
+    "alpha2Code": "US",
+    "alpha3Code": "USA",
+    "callingCodes": ["1"],
+    "capital": "Washington, D.C.",
+    "altSpellings": ["US", "USA", "United States of America"],
+    "subregion": "Northern America",
+    "region": "Americas",
+    "population": 329484123,
+    "latlng": [38, -97],
+    "demonym": "American",
+    "area": 9629091,
+    "gini": 41.4,
+    "timezones": [
+      "UTC-12:00",
+      "UTC-11:00",
+      "UTC-10:00",
+      "UTC-09:00",
+      "UTC-08:00",
+      "UTC-07:00",
+      "UTC-06:00",
+      "UTC-05:00",
+      "UTC-04:00",
+      "UTC+10:00",
+      "UTC+12:00"
+    ],
+    "borders": ["CAN", "MEX"],
+    "nativeName": "United States",
+    "numericCode": "840",
+    "flags": {
+      "svg": "https://flagcdn.com/us.svg",
+      "png": "https://flagcdn.com/w320/us.png"
+    },
+    "currencies": [
+      {
+        "code": "USD",
+        "name": "United States dollar",
+        "symbol": "$"
+      }
+    ],
+    "languages": [
+      {
+        "iso639_1": "en",
+        "iso639_2": "eng",
+        "name": "English",
+        "nativeName": "English"
+      }
+    ],
+    "translations": {
+      "br": "Stadoù-Unanet",
+      "pt": "Estados Unidos",
+      "nl": "Verenigde Staten",
+      "hr": "Sjedinjene Američke Države",
+      "fa": "ایالات متحده آمریکا",
+      "de": "Vereinigte Staaten von Amerika",
+      "es": "Estados Unidos",
+      "fr": "États-Unis",
+      "ja": "アメリカ合衆国",
+      "it": "Stati Uniti D'America",
+      "hu": "Amerikai Egyesült Államok"
+    },
+    "flag": "https://flagcdn.com/us.svg",
+    "regionalBlocs": [
+      {
+        "acronym": "NAFTA",
+        "name": "North American Free Trade Agreement",
+        "otherNames": [
+          "Tratado de Libre Comercio de América del Norte",
+          "Accord de Libre-échange Nord-Américain"
+        ]
+      }
+    ],
+    "cioc": "USA",
+    "independent": true
+  },
+  {
+    "name": "Brazil",
+    "topLevelDomain": [".br"],
+    "alpha2Code": "BR",
+    "alpha3Code": "BRA",
+    "callingCodes": ["55"],
+    "capital": "Brasília",
+    "altSpellings": [
+      "BR",
+      "Brasil",
+      "Federative Republic of Brazil",
+      "República Federativa do Brasil"
+    ],
+    "subregion": "South America",
+    "region": "Americas",
+    "population": 212559409,
+    "latlng": [-10, -55],
+    "demonym": "Brazilian",
+    "area": 8515767,
+    "gini": 53.4,
+    "timezones": ["UTC-05:00", "UTC-04:00", "UTC-03:00", "UTC-02:00"],
+    "borders": [
+      "ARG",
+      "BOL",
+      "COL",
+      "FRA",
+      "GUF",
+      "GUY",
+      "PRY",
+      "PER",
+      "SUR",
+      "URY",
+      "VEN"
+    ],
+    "nativeName": "Brasil",
+    "numericCode": "076",
+    "flags": {
+      "svg": "https://flagcdn.com/br.svg",
+      "png": "https://flagcdn.com/w320/br.png"
+    },
+    "currencies": [
+      {
+        "code": "BRL",
+        "name": "Brazilian real",
+        "symbol": "R$"
+      }
+    ],
+    "languages": [
+      {
+        "iso639_1": "pt",
+        "iso639_2": "por",
+        "name": "Portuguese",
+        "nativeName": "Português"
+      }
+    ],
+    "translations": {
+      "br": "Brazil",
+      "pt": "Brasil",
+      "nl": "Brazilië",
+      "hr": "Brazil",
+      "fa": "برزیل",
+      "de": "Brasilien",
+      "es": "Brasil",
+      "fr": "Brésil",
+      "ja": "ブラジル",
+      "it": "Brasile",
+      "hu": "Brazília"
+    },
+    "flag": "https://flagcdn.com/br.svg",
+    "regionalBlocs": [
+      {
+        "acronym": "USAN",
+        "name": "Union of South American Nations",
+        "otherAcronyms": ["UNASUR", "UNASUL", "UZAN"],
+        "otherNames": [
+          "Unión de Naciones Suramericanas",
+          "União de Nações Sul-Americanas",
+          "Unie van Zuid-Amerikaanse Naties",
+          "South American Union"
+        ]
+      }
+    ],
+    "cioc": "BRA",
+    "independent": true
+  },
+  {
+    "name": "Iceland",
+    "topLevelDomain": [".is"],
+    "alpha2Code": "IS",
+    "alpha3Code": "ISL",
+    "callingCodes": ["354"],
+    "capital": "Reykjavík",
+    "altSpellings": ["IS", "Island", "Republic of Iceland", "Lýðveldið Ísland"],
+    "subregion": "Northern Europe",
+    "region": "Europe",
+    "population": 366425,
+    "latlng": [65, -18],
+    "demonym": "Icelander",
+    "area": 103000,
+    "gini": 26.1,
+    "timezones": ["UTC"],
+    "nativeName": "Ísland",
+    "numericCode": "352",
+    "flags": {
+      "svg": "https://flagcdn.com/is.svg",
+      "png": "https://flagcdn.com/w320/is.png"
+    },
+    "currencies": [
+      {
+        "code": "ISK",
+        "name": "Icelandic króna",
+        "symbol": "kr"
+      }
+    ],
+    "languages": [
+      {
+        "iso639_1": "is",
+        "iso639_2": "isl",
+        "name": "Icelandic",
+        "nativeName": "Íslenska"
+      }
+    ],
+    "translations": {
+      "br": "Island",
+      "pt": "Islândia",
+      "nl": "IJsland",
+      "hr": "Island",
+      "fa": "ایسلند",
+      "de": "Island",
+      "es": "Islandia",
+      "fr": "Islande",
+      "ja": "アイスランド",
+      "it": "Islanda",
+      "hu": "Izland"
+    },
+    "flag": "https://flagcdn.com/is.svg",
+    "regionalBlocs": [
+      {
+        "acronym": "EFTA",
+        "name": "European Free Trade Association"
+      }
+    ],
+    "cioc": "ISL",
+    "independent": true
+  },
   {
     "name": "Afghanistan",
     "topLevelDomain": [".af"],
@@ -2043,91 +2331,7 @@
     "flag": "https://flagcdn.com/bv.svg",
     "independent": false
   },
-  {
-    "name": "Brazil",
-    "topLevelDomain": [".br"],
-    "alpha2Code": "BR",
-    "alpha3Code": "BRA",
-    "callingCodes": ["55"],
-    "capital": "Brasília",
-    "altSpellings": [
-      "BR",
-      "Brasil",
-      "Federative Republic of Brazil",
-      "República Federativa do Brasil"
-    ],
-    "subregion": "South America",
-    "region": "Americas",
-    "population": 212559409,
-    "latlng": [-10, -55],
-    "demonym": "Brazilian",
-    "area": 8515767,
-    "gini": 53.4,
-    "timezones": ["UTC-05:00", "UTC-04:00", "UTC-03:00", "UTC-02:00"],
-    "borders": [
-      "ARG",
-      "BOL",
-      "COL",
-      "FRA",
-      "GUF",
-      "GUY",
-      "PRY",
-      "PER",
-      "SUR",
-      "URY",
-      "VEN"
-    ],
-    "nativeName": "Brasil",
-    "numericCode": "076",
-    "flags": {
-      "svg": "https://flagcdn.com/br.svg",
-      "png": "https://flagcdn.com/w320/br.png"
-    },
-    "currencies": [
-      {
-        "code": "BRL",
-        "name": "Brazilian real",
-        "symbol": "R$"
-      }
-    ],
-    "languages": [
-      {
-        "iso639_1": "pt",
-        "iso639_2": "por",
-        "name": "Portuguese",
-        "nativeName": "Português"
-      }
-    ],
-    "translations": {
-      "br": "Brazil",
-      "pt": "Brasil",
-      "nl": "Brazilië",
-      "hr": "Brazil",
-      "fa": "برزیل",
-      "de": "Brasilien",
-      "es": "Brasil",
-      "fr": "Brésil",
-      "ja": "ブラジル",
-      "it": "Brasile",
-      "hu": "Brazília"
-    },
-    "flag": "https://flagcdn.com/br.svg",
-    "regionalBlocs": [
-      {
-        "acronym": "USAN",
-        "name": "Union of South American Nations",
-        "otherAcronyms": ["UNASUR", "UNASUL", "UZAN"],
-        "otherNames": [
-          "Unión de Naciones Suramericanas",
-          "União de Nações Sul-Americanas",
-          "Unie van Zuid-Amerikaanse Naties",
-          "South American Union"
-        ]
-      }
-    ],
-    "cioc": "BRA",
-    "independent": true
-  },
+  
   {
     "name": "British Indian Ocean Territory",
     "topLevelDomain": [".io"],
@@ -5747,71 +5951,6 @@
     "independent": true
   },
   {
-    "name": "Germany",
-    "topLevelDomain": [".de"],
-    "alpha2Code": "DE",
-    "alpha3Code": "DEU",
-    "callingCodes": ["49"],
-    "capital": "Berlin",
-    "altSpellings": [
-      "DE",
-      "Federal Republic of Germany",
-      "Bundesrepublik Deutschland"
-    ],
-    "subregion": "Central Europe",
-    "region": "Europe",
-    "population": 83240525,
-    "latlng": [51, 9],
-    "demonym": "German",
-    "area": 357114,
-    "gini": 31.9,
-    "timezones": ["UTC+01:00"],
-    "borders": ["AUT", "BEL", "CZE", "DNK", "FRA", "LUX", "NLD", "POL", "CHE"],
-    "nativeName": "Deutschland",
-    "numericCode": "276",
-    "flags": {
-      "svg": "https://flagcdn.com/de.svg",
-      "png": "https://flagcdn.com/w320/de.png"
-    },
-    "currencies": [
-      {
-        "code": "EUR",
-        "name": "Euro",
-        "symbol": "€"
-      }
-    ],
-    "languages": [
-      {
-        "iso639_1": "de",
-        "iso639_2": "deu",
-        "name": "German",
-        "nativeName": "Deutsch"
-      }
-    ],
-    "translations": {
-      "br": "Alamagn",
-      "pt": "Alemanha",
-      "nl": "Duitsland",
-      "hr": "Njemačka",
-      "fa": "آلمان",
-      "de": "Deutschland",
-      "es": "Alemania",
-      "fr": "Allemagne",
-      "ja": "ドイツ",
-      "it": "Germania",
-      "hu": "Grúzia"
-    },
-    "flag": "https://flagcdn.com/de.svg",
-    "regionalBlocs": [
-      {
-        "acronym": "EU",
-        "name": "European Union"
-      }
-    ],
-    "cioc": "GER",
-    "independent": true
-  },
-  {
     "name": "Ghana",
     "topLevelDomain": [".gh"],
     "alpha2Code": "GH",
@@ -6967,66 +7106,6 @@
     "flag": "https://flagcdn.com/hk.svg",
     "cioc": "HKG",
     "independent": false
-  },
-  {
-    "name": "Iceland",
-    "topLevelDomain": [".is"],
-    "alpha2Code": "IS",
-    "alpha3Code": "ISL",
-    "callingCodes": ["354"],
-    "capital": "Reykjavík",
-    "altSpellings": ["IS", "Island", "Republic of Iceland", "Lýðveldið Ísland"],
-    "subregion": "Northern Europe",
-    "region": "Europe",
-    "population": 366425,
-    "latlng": [65, -18],
-    "demonym": "Icelander",
-    "area": 103000,
-    "gini": 26.1,
-    "timezones": ["UTC"],
-    "nativeName": "Ísland",
-    "numericCode": "352",
-    "flags": {
-      "svg": "https://flagcdn.com/is.svg",
-      "png": "https://flagcdn.com/w320/is.png"
-    },
-    "currencies": [
-      {
-        "code": "ISK",
-        "name": "Icelandic króna",
-        "symbol": "kr"
-      }
-    ],
-    "languages": [
-      {
-        "iso639_1": "is",
-        "iso639_2": "isl",
-        "name": "Icelandic",
-        "nativeName": "Íslenska"
-      }
-    ],
-    "translations": {
-      "br": "Island",
-      "pt": "Islândia",
-      "nl": "IJsland",
-      "hr": "Island",
-      "fa": "ایسلند",
-      "de": "Island",
-      "es": "Islandia",
-      "fr": "Islande",
-      "ja": "アイスランド",
-      "it": "Islanda",
-      "hu": "Izland"
-    },
-    "flag": "https://flagcdn.com/is.svg",
-    "regionalBlocs": [
-      {
-        "acronym": "EFTA",
-        "name": "European Free Trade Association"
-      }
-    ],
-    "cioc": "ISL",
-    "independent": true
   },
   {
     "name": "India",
@@ -16057,83 +16136,7 @@
     "cioc": "GBR",
     "independent": true
   },
-  {
-    "name": "United States of America",
-    "topLevelDomain": [".us"],
-    "alpha2Code": "US",
-    "alpha3Code": "USA",
-    "callingCodes": ["1"],
-    "capital": "Washington, D.C.",
-    "altSpellings": ["US", "USA", "United States of America"],
-    "subregion": "Northern America",
-    "region": "Americas",
-    "population": 329484123,
-    "latlng": [38, -97],
-    "demonym": "American",
-    "area": 9629091,
-    "gini": 41.4,
-    "timezones": [
-      "UTC-12:00",
-      "UTC-11:00",
-      "UTC-10:00",
-      "UTC-09:00",
-      "UTC-08:00",
-      "UTC-07:00",
-      "UTC-06:00",
-      "UTC-05:00",
-      "UTC-04:00",
-      "UTC+10:00",
-      "UTC+12:00"
-    ],
-    "borders": ["CAN", "MEX"],
-    "nativeName": "United States",
-    "numericCode": "840",
-    "flags": {
-      "svg": "https://flagcdn.com/us.svg",
-      "png": "https://flagcdn.com/w320/us.png"
-    },
-    "currencies": [
-      {
-        "code": "USD",
-        "name": "United States dollar",
-        "symbol": "$"
-      }
-    ],
-    "languages": [
-      {
-        "iso639_1": "en",
-        "iso639_2": "eng",
-        "name": "English",
-        "nativeName": "English"
-      }
-    ],
-    "translations": {
-      "br": "Stadoù-Unanet",
-      "pt": "Estados Unidos",
-      "nl": "Verenigde Staten",
-      "hr": "Sjedinjene Američke Države",
-      "fa": "ایالات متحده آمریکا",
-      "de": "Vereinigte Staaten von Amerika",
-      "es": "Estados Unidos",
-      "fr": "États-Unis",
-      "ja": "アメリカ合衆国",
-      "it": "Stati Uniti D'America",
-      "hu": "Amerikai Egyesült Államok"
-    },
-    "flag": "https://flagcdn.com/us.svg",
-    "regionalBlocs": [
-      {
-        "acronym": "NAFTA",
-        "name": "North American Free Trade Agreement",
-        "otherNames": [
-          "Tratado de Libre Comercio de América del Norte",
-          "Accord de Libre-échange Nord-Américain"
-        ]
-      }
-    ],
-    "cioc": "USA",
-    "independent": true
-  },
+
   {
     "name": "Uruguay",
     "topLevelDomain": [".uy"],
