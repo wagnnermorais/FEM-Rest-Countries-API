@@ -1,10 +1,11 @@
 .country-box {
   display: flex;
   flex-direction: column;
+  font-size: var(--homepage-fs);
   border: none;
   border-radius: 10px;
-  box-shadow: var(--main-bs);
   min-height: 375px;
+  box-shadow: var(--main-bs);
   background: hsl(var(--neutral-white));
 }
 
@@ -17,7 +18,12 @@
   padding: 1rem;
 }
 
+.country-data-p:nth-child(2) {
+  margin: 1rem 0 0;
+}
+
 .country-data-p {
+  margin: 0.425rem 0;
   font-weight: var(--fw-bold);
 }
 
