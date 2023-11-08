@@ -28,7 +28,7 @@ const PageUp = () => {
       className={`page-up ${isVisible ? "visible" : ""}`}
       onClick={scrollToTop}
     >
-      <ion-icon name="arrow-up-circle-outline"></ion-icon>
+      <ion-icon name="arrow-up-outline" />
     </div>
   );
 };
