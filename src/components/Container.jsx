@@ -1,6 +1,7 @@
 import "../styles/Container.css";
 
 const Container = ({ flag, alt, title, population, region, capital }) => {
+  const formattedPopulation = population.toLocaleString();
   return (
     <div className="country-box">
       <div className="flag-box">
@@ -9,7 +10,7 @@ const Container = ({ flag, alt, title, population, region, capital }) => {
       <div className="country-data">
         <h3 className="country-data-title">{title}</h3>
         <p className="country-data-p">
-          Population: <span className="data">{population}</span>
+          Population: <span className="data">{formattedPopulation}</span>
         </p>
         <p className="country-data-p">
           Region: <span className="data">{region}</span>
