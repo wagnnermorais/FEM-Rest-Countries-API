@@ -2,17 +2,16 @@
   min-height: 100vh;
   background: hsl(var(--neutral-dm-very-dark-blue));
   color: hsl(var(--neutral-white));
-  transition: var(--main-transition) ease-in-out;
 }
 
 .light-container {
   min-height: 100vh;
   background: hsl(var(--neutral-lm-very-light-gray));
-  transition: var(--main-transition);
 }
 
 .countries-container {
   position: relative;
+  margin: 2rem 0;
 }
 
 .input-box {
@@ -25,11 +24,7 @@
   width: 40%;
 }
 
-.search-input {
-  width: 100%;
-}
-
-.search-input input {
+.search-input-box input {
   margin: 2rem 0 0;
   padding: 1rem 0 1rem 3rem;
   width: 100%;
@@ -39,7 +34,6 @@
   border-radius: 5px;
   outline: none;
   box-shadow: var(--main-bs);
-  transition: var(--main-transition);
 }
 
 .s-light-input,
@@ -78,7 +72,6 @@
   border-radius: 5px;
   outline: none;
   box-shadow: var(--main-bs);
-  transition: var(--main-transition);
   font-weight: var(--fw-semibold);
 }
 
@@ -99,27 +92,46 @@
   width: 100%;
 }
 
-.home-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1440px;
-  margin: 0 auto;
-  overflow: hidden;
-  transition: var(--main-transition);
-}
-
-.country-container {
-  position: relative;
-  width: calc(25% - 55px);
-  margin: 1rem 0;
-  transition: var(--main-transition);
-}
-
 .button-box {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
+}
+
+.home-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.container-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 1.725rem;
+}
+
+.country-container {
+  position: relative;
+  width: 100%;
+  min-width: 340px; /* Largura mínima para evitar esticamento */
+}
+
+/* Defina uma largura máxima para as imagens */
+.country-box img {
+  max-width: 100%;
+}
+
+/* Ajuste o layout para 4 containers por linha */
+@media (min-width: 768px) {
+  .container-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Quando houver menos de 4 países, exiba-os lado a lado */
+@media (max-width: 768px) {
+  .container-grid {
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  }
 }
