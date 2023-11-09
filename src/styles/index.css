@@ -9,17 +9,22 @@
   --neutral-white: 0, 0%, 100%;
   --homepage-fs: 14px;
   --details-page-fs: 16px;
-  --main-fs: "Nunito Sans", sans-serif;
+  --main-ff: "Nunito Sans", sans-serif;
   --fw-thin: 300;
   --fw-semibold: 600;
   --fw-bold: 800;
   --main-bs: 1px 2px 5px rgba(0, 0, 0, 0.1525);
-  --main-transition: 0.45s;
+  --main-transition: 0.25s;
 }
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: var(--main-fs);
+  font-family: var(--main-ff);
+  transition: all var(--main-transition);
+}
+
+html {
+  scroll-behavior: smooth;
 }

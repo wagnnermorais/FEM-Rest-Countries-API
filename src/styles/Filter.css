@@ -22,7 +22,6 @@
   opacity: 0;
   z-index: 1000;
   overflow: hidden;
-  transition: all var(--main-transition);
 }
 
 .filter-box.open {
@@ -38,7 +37,6 @@
 .filter-list {
   padding: 1rem 1.25rem;
   border: none;
-
   background: hsl(var(--neutral-white));
   box-shadow: var(--main-bs);
 }
@@ -49,7 +47,6 @@
   font-weight: var(--fw-semibold);
   list-style: none;
   cursor: pointer;
-  transition: var(--main-transition);
 }
 
 .filter-list-item:hover {

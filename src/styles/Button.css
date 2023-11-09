@@ -4,7 +4,6 @@
   border: none;
   border-radius: 5px;
   font-weight: var(--fw-semibold);
-  transition: var(--main-transition);
   cursor: pointer;
 }
 

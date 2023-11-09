@@ -3,7 +3,6 @@
   align-items: center;
   gap: 0.5rem;
   cursor: pointer;
-  transition: var(--main-transition);
 }
 
 .theme-box:hover {
