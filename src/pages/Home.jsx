@@ -13,10 +13,26 @@ import PageUp from "../components/PageUp";
 const Home = () => {
   const { visibleRows, handleLoadMore, handleLoadLess } = useLoadCountries(2);
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [searchValue, setSearchValue] = useState("");
+  const [selectedContinent, setSelectedContinent] = useState(null);
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
   };
+
+  const filteredCountries = countries
+    .map((country) => {
+      if (country.region === "Americas") {
+        country.region = "America";
+      }
+      return country;
+    })
+    .filter((country) => {
+      if (!selectedContinent) {
+        return true;
+      }
+      return country.region === selectedContinent;
+    });
 
   return (
     <div
@@ -26,63 +42,57 @@ const Home = () => {
       <div className="input-box home-wrapper">
         <div className="filters-box">
           <div className="search-input-box">
-            {isDarkMode ? (
-              <div className="search-input">
-                <FontAwesomeIcon
-                  icon={faMagnifyingGlass}
-                  size="xl"
-                  color="hsl(var(--neutral-white)"
-                  className="mag-icon"
-                />
-                <input
-                  type="text"
-                  placeholder="Search for a country..."
-                  className="s-dark-input"
-                />
-              </div>
-            ) : (
-              <div className="search-input">
-                <FontAwesomeIcon
-                  icon={faMagnifyingGlass}
-                  size="xl"
-                  color="hsl(var(--neutral-lm-dark-gray)"
-                  className="mag-icon"
-                />
-                <input
-                  type="text"
-                  placeholder="Search for a country..."
-                  className="s-light-input"
-                />
-              </div>
-            )}
+            <FontAwesomeIcon
+              icon={faMagnifyingGlass}
+              size="xl"
+              color={
+                isDarkMode
+                  ? "hsl(var(--neutral-white)"
+                  : "hsl(var(--neutral-lm-dark-gray)"
+              }
+              className="mag-icon"
+            />
+            <input
+              type="text"
+              placeholder="Search for a country..."
+              className={isDarkMode ? "s-dark-input" : "s-light-input"}
+              value={searchValue}
+              onChange={(e) => setSearchValue(e.target.value)}
+            />
           </div>
           <div className="filter">
             <Filter
               title={"Filter by Region"}
-              items={["Africa", "America", "Asia", "Europe", "Oceania"]}
+              items={["All", "Africa", "America", "Asia", "Europe", "Oceania"]}
+              selectedContinent={selectedContinent}
+              setSelectedContinent={setSelectedContinent}
             />
           </div>
         </div>
         <div className="countries-container">
           <div className="home-wrapper">
-            {countries.slice(0, visibleRows * 4).map((country) => (
-              <div key={country.name} className="country-container">
-                <Container
-                  flag={country.flags.png}
-                  alt={`${country.name} Flag`}
-                  title={country.name}
-                  population={country.population}
-                  region={country.region}
-                  capital={country.capital}
-                />
-              </div>
-            ))}
+            <div className="container-grid">
+              {filteredCountries.slice(0, visibleRows * 4).map((country) => (
+                <div key={country.name} className="country-container">
+                  <Container
+                    flag={country.flags.png}
+                    alt={`${country.name} Flag`}
+                    title={country.name}
+                    population={country.population}
+                    region={country.region}
+                    capital={country.capital}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
       <div className="button-box">
         <Button onClick={handleLoadMore} text={"Load more"} />
-        <Button onClick={handleLoadLess} text={"Load less"} />
+        {visibleRows > 2 && (
+          <Button onClick={handleLoadLess} text={"Load less"} />
+        )}
       </div>
       <PageUp />
     </div>
