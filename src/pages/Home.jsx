@@ -29,6 +29,12 @@ const Home = () => {
         return true;
       }
       return country.region === selectedContinent;
+    })
+    .filter((country) => {
+      if (!searchValue) {
+        return true;
+      }
+      return country.name.toLowerCase().includes(searchValue.toLowerCase());
     });
 
   return (
