@@ -5,6 +5,7 @@ import Filter from "../components/Filter";
 import countries from "../../db/data.json";
 import { useState } from "react";
 import { useLoadCountries } from "../hooks/useLoadCountries";
+import useDarkMode from "../hooks/useDarkMode";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../styles/Home.css";
@@ -12,13 +13,9 @@ import PageUp from "../components/PageUp";
 
 const Home = () => {
   const { visibleRows, handleLoadMore, handleLoadLess } = useLoadCountries(2);
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const { isDarkMode, toggleDarkMode } = useDarkMode();
   const [searchValue, setSearchValue] = useState("");
   const [selectedContinent, setSelectedContinent] = useState(null);
-
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-  };
 
   const filteredCountries = countries
     .map((country) => {
