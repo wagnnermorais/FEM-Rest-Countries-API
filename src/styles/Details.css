@@ -1,0 +1,13 @@
+.flag-box img {
+  width: 30%;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.details-container {
+  display: flex;
+}
