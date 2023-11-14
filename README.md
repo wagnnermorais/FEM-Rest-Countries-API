@@ -1,4 +1,4 @@
-# Front-end Mentor Tip Calculator
+# Front-end Mentor REST Countries API with color theme switcher
 
 Repositório criado para realizar o desafio de front-end do Front-end Mentor.
 
