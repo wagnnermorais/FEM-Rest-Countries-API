@@ -1,13 +1,47 @@
-.flag-box img {
-  width: 30%;
-}
-
 .details {
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 10rem;
+  height: 60dvh;
 }
 
-.details-container {
+.country-information {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 35rem;
+}
+
+.geo-information p,
+.demograph-information p {
+  line-height: 2;
+}
+
+.details-container p {
+  font-weight: 700;
+}
+
+.country-name h3 {
+  width: calc(100% * 2);
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.demograph-information {
+  margin-top: 1.25rem;
+}
+
+.border-country-box {
+  margin-bottom: 0.5rem;
+}
+
+.border-countries-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 5rem 0 0;
+}
+
+.border-country-title {
+  margin-right: 1rem;
 }
