@@ -114,22 +114,20 @@
 .country-container {
   position: relative;
   width: 100%;
-  min-width: 340px; /* Largura mínima para evitar esticamento */
+  min-width: 340px;
 }
 
-/* Defina uma largura máxima para as imagens */
 .country-box img {
   max-width: 100%;
+  object-fit: cover;
 }
 
-/* Ajuste o layout para 4 containers por linha */
 @media (min-width: 768px) {
   .container-grid {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
-/* Quando houver menos de 4 países, exiba-os lado a lado */
 @media (max-width: 768px) {
   .container-grid {
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
