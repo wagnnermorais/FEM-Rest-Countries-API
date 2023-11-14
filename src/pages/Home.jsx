@@ -13,7 +13,8 @@ import PageUp from "../components/PageUp";
 
 const Home = () => {
   const { visibleRows, handleLoadMore, handleLoadLess } = useLoadCountries(2);
-  const { isDarkMode, toggleDarkMode } = useDarkMode();
+  const initialDarkMode = localStorage.getItem("isDarkMode") === "true";
+  const { isDarkMode, toggleDarkMode } = useDarkMode(initialDarkMode);
   const [searchValue, setSearchValue] = useState("");
   const [selectedContinent, setSelectedContinent] = useState(null);
 
@@ -78,7 +79,7 @@ const Home = () => {
               {filteredCountries.slice(0, visibleRows * 4).map((country) => (
                 <div key={country.name} className="country-container">
                   <Container
-                    flag={country.flags.png}
+                    flag={country.flags.svg}
                     alt={`${country.name} Flag`}
                     title={country.name}
                     population={country.population}
@@ -92,9 +93,21 @@ const Home = () => {
         </div>
       </div>
       <div className="button-box">
-        <Button onClick={handleLoadMore} text={"Load more"} />
+        <Button
+          onClick={handleLoadMore}
+          text={"Load more"}
+          isDarkMode={isDarkMode}
+          margin="1rem 0"
+          padding=".5rem 2rem"
+        />
         {visibleRows > 2 && (
-          <Button onClick={handleLoadLess} text={"Load less"} />
+          <Button
+            onClick={handleLoadLess}
+            text={"Load less"}
+            margin="1rem 0"
+            padding=".5rem 2rem"
+            isDarkMode={isDarkMode}
+          />
         )}
       </div>
       <PageUp />
