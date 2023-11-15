@@ -17,3 +17,18 @@
   background: hsl(var(--neutral-dm-dark-blue));
   color: hsl(var(--neutral-white));
 }
+
+@media screen and (max-width: 600px) {
+  .main-header {
+    padding: 1.5rem 0;
+  }
+
+  .header-wrapper {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .header-wrapper h2 {
+    font-size: 1rem;
+  }
+}

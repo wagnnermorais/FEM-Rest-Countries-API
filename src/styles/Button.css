@@ -1,6 +1,7 @@
 .main-button {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   border: none;
   font-size: 16px;
@@ -30,4 +31,23 @@
 
 .icon {
   margin: 0.25rem 0 0;
+}
+
+@media screen and (max-width: 600px) {
+  .button-component {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+  }
+
+  .main-button {
+    font-size: 16px;
+    padding: 0.5rem 0 !important;
+    width: 150px;
+    text-align: center;
+  }
+
+  .icon {
+    margin: 0.25rem 0 0;
+  }
 }

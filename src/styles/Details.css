@@ -12,6 +12,11 @@
   width: 35rem;
 }
 
+.image-details {
+  width: 700px;
+  height: 500px;
+}
+
 .geo-information p,
 .demograph-information p {
   line-height: 2;
@@ -37,11 +42,54 @@
 
 .border-countries-container {
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
   margin: 5rem 0 0;
 }
 
-.border-country-title {
-  margin-right: 1rem;
+.borders {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .details {
+    display: block;
+    height: auto;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .details-button-box {
+    margin: 0 auto 3.725rem;
+  }
+
+  .country-information {
+    display: block;
+    width: 100%;
+  }
+
+  .image-details {
+    width: 100% !important;
+    height: 50%;
+  }
+
+  .country-name h3 {
+    margin: 3rem 0 1.5rem;
+  }
+
+  .border-countries-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 !important;
+  }
+
+  .border-country-title {
+    width: 100%;
+    margin: 2rem 0 1rem;
+    font-size: 1.325rem;
+  }
+
+  .border-country-box {
+    margin: 0;
+  }
 }

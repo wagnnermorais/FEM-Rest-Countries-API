@@ -14,6 +14,12 @@
   margin: 2rem 0;
 }
 
+.home-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
 .input-box {
   position: relative;
 }
@@ -28,8 +34,8 @@
   margin: 2rem 0 0;
   padding: 1rem 0 1rem 3rem;
   width: 100%;
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: var(--fw-bold);
   border: none;
   border-radius: 5px;
   outline: none;
@@ -62,53 +68,13 @@
   position: absolute;
   left: 1rem;
   top: 3.5rem;
-  font-size: 18px;
-}
-
-.countries-select {
-  padding: 1rem;
-  font-size: 14px;
-  border: none;
-  border-radius: 5px;
-  outline: none;
-  box-shadow: var(--main-bs);
-  font-weight: var(--fw-semibold);
-}
-
-.countries-select option {
-  font-weight: var(--fw-semibold);
-  margin: 0.5rem 0;
-  border: none;
-  border-radius: 5px;
-}
-
-.countries-select:hover {
-  background: #f6f8f8;
+  font-size: 1.125rem;
 }
 
 .filters-box {
   display: flex;
   justify-content: space-between;
   width: 100%;
-}
-
-.button-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-}
-
-.home-wrapper {
-  max-width: 1440px;
-  margin: 0 auto;
-  overflow: hidden;
-}
-
-.container-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  gap: 1.725rem;
 }
 
 .country-container {
@@ -122,6 +88,19 @@
   object-fit: cover;
 }
 
+.container-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 1.725rem;
+}
+
+.button-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
 @media (min-width: 768px) {
   .container-grid {
     grid-template-columns: repeat(4, 1fr);
@@ -131,5 +110,48 @@
 @media (max-width: 768px) {
   .container-grid {
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .dark-mode,
+  .light-container {
+    min-height: auto;
+  }
+
+  .home-wrapper {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .filters-box {
+    display: block;
+    width: 100%;
+  }
+
+  .search-input-box {
+    width: 100%;
+  }
+
+  .search-input-box input {
+    margin: 2rem 0 3rem;
+    padding: 1rem 0 1rem 5rem;
+    width: 100%;
+    font-weight: var(--fw-semibold);
+  }
+
+  .mag-icon {
+    top: 3.175rem;
+  }
+
+  .country-box img {
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+  .container-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 1.725rem;
   }
 }
