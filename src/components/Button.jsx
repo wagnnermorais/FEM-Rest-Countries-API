@@ -1,21 +1,13 @@
 import "../styles/Button.css";
 
-const Button = ({
-  onClick,
-  text,
-  icon,
-  isDarkMode,
-  margin,
-  padding,
-  width,
-}) => {
+const Button = ({ onClick, text, icon, isDarkMode, margin, padding }) => {
   return (
-    <div>
+    <div className="button-component">
       <button
         className={`main-button ${
           isDarkMode ? "s-dark-button" : "s-light-button"
         }`}
-        style={{ margin, padding, width }}
+        style={{ margin, padding }}
         onClick={onClick}
       >
         {icon && <span className="icon">{icon}</span>}
