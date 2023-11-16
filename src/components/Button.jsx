@@ -1,8 +1,16 @@
 import "../styles/Button.css";
 
-const Button = ({ onClick, text, icon, isDarkMode, margin, padding }) => {
+const Button = ({
+  onClick,
+  text,
+  icon,
+  isDarkMode,
+  margin,
+  padding,
+  alignCenter = true,
+}) => {
   return (
-    <div className="button-component">
+    <div className={`button-component ${alignCenter ? "center" : ""}`}>
       <button
         className={`main-button ${
           isDarkMode ? "s-dark-button" : "s-light-button"
