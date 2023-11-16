@@ -33,11 +33,17 @@
   margin: 0.25rem 0 0;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 767px) {
   .button-component {
     width: 90%;
     margin: 0 auto;
     margin-bottom: 1rem;
+  }
+
+  .button-component.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .main-button {

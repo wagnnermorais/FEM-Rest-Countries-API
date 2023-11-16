@@ -12,6 +12,7 @@
 
 .flag-box img {
   border-radius: 10px 10px 0 0;
+  height: 12.5rem;
   width: 100%;
 }
 
@@ -35,4 +36,50 @@
 .dark-mode .country-box {
   background: hsl(var(--neutral-dm-dark-blue));
   color: hsl(var(--neutral-white));
+}
+
+@media screen and (max-width: 600px) {
+  .country-box {
+    font-size: 1.0575rem;
+  }
+
+  .flag-box img {
+    height: 17.5rem;
+  }
+
+  .country-data {
+    padding: 2rem;
+  }
+
+  .country-data-p {
+    font-weight: var(--fw-semibold);
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 767px) {
+  .country-box {
+    font-size: 1.0575rem;
+  }
+
+  .flag-box img {
+    height: 20.5rem;
+    width: 100%;
+  }
+
+  .country-data {
+    padding: 1rem;
+  }
+
+  .country-data-p:nth-child(2) {
+    margin: 1rem 0 0;
+  }
+
+  .country-data-p {
+    margin: 0.425rem 0;
+    font-weight: var(--fw-bold);
+  }
+
+  .data {
+    font-weight: var(--fw-thin);
+  }
 }

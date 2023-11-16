@@ -67,7 +67,7 @@
   color: hsl(var(--neutral-white));
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .title {
     justify-content: space-between;
     padding: 1.5rem 1.25rem;

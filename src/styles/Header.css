@@ -18,7 +18,7 @@
   color: hsl(var(--neutral-white));
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .main-header {
     padding: 1.5rem 0;
   }
