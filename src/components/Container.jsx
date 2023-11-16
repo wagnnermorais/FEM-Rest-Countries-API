@@ -7,7 +7,7 @@ const Container = ({ flag, alt, title, population, region, capital }) => {
     <Link to={`details/${title}`} className="no-style-link">
       <div className="country-box">
         <div className="flag-box">
-          <img src={flag} alt={alt} width={250} height={200} />
+          <img src={flag} alt={alt} />
         </div>
         <div className="country-data">
           <h3 className="country-data-title">{title}</h3>
