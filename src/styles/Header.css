@@ -19,16 +19,23 @@
 }
 
 @media screen and (max-width: 768px) {
-  .main-header {
-    padding: 1.5rem 0;
-  }
-
   .header-wrapper {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
   }
 
   .header-wrapper h2 {
     font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1500px) {
+  .header-wrapper {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .header-wrapper h2 {
+    font-size: 1.225rem;
   }
 }

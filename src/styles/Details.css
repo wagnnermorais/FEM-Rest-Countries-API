@@ -14,7 +14,7 @@
 
 .image-details {
   width: 700px;
-  height: 500px;
+  height: 50%;
 }
 
 .geo-information p,
@@ -40,23 +40,29 @@
   margin-bottom: 0.5rem;
 }
 
+.border-country-title {
+  width: calc(100% * 1.75);
+}
+
 .border-countries-container {
   display: flex;
+  gap: 3.25rem;
   margin: 5rem 0 0;
 }
 
 .borders {
   display: flex;
   flex-wrap: wrap;
+  gap: 0.5rem;
   width: 100%;
   margin: 0 0 1rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1366px) {
   .details {
     display: block;
     height: auto;
-    width: 80%;
+    width: 95%;
     margin: 0 auto;
   }
 
@@ -69,19 +75,8 @@
     width: 100%;
   }
 
-  .image-details {
-    width: 100% !important;
-    height: 50%;
-  }
-
   .country-name h3 {
     margin: 3rem 0 1.5rem;
-  }
-
-  .border-countries-container {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 !important;
   }
 
   .border-country-title {
@@ -90,7 +85,55 @@
     font-size: 1.325rem;
   }
 
+  .border-countries-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 0;
+    gap: 0;
+  }
+
   .border-country-box {
     margin: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .image-details {
+    width: 100% !important;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .image-details {
+    width: 80% !important;
+  }
+
+  .border-countries-container {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1366px) {
+  .details-button-box {
+    margin: 0 auto 1rem;
+  }
+
+  .image-details {
+    width: 60% !important;
+  }
+
+  .border-countries-container {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1367px) and (max-width: 1500px) {
+  .details {
+    gap: 5rem;
+  }
+
+  .country-information {
+    width: 30.5rem;
   }
 }

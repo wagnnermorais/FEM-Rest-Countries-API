@@ -1,11 +1,11 @@
 .page-up {
-  padding: 0.25rem;
+  padding: 0.5rem 0.75rem;
   position: fixed;
   bottom: 1rem;
   right: 1rem;
   border: none;
   border-radius: 50%;
-  background: hsl(var(--neutral-lm-dark-gray));
+  background-color: #000000;
   color: #fff;
   cursor: pointer;
   opacity: 0;
@@ -13,4 +13,10 @@
 
 .page-up.visible {
   opacity: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .page-up {
+    bottom: 3.75rem;
+  }
 }

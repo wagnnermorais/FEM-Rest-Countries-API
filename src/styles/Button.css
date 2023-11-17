@@ -4,12 +4,20 @@
   justify-content: center;
   gap: 0.5rem;
   border: none;
-  font-size: 16px;
+  font-size: 1rem;
   border-radius: 5px;
   font-weight: var(--fw-semibold);
   cursor: pointer;
   position: relative;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.325);
+}
+
+.button-component.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 10.125rem;
 }
 
 .s-light-button {
@@ -33,17 +41,13 @@
   margin: 0.25rem 0 0;
 }
 
-@media screen and (max-width: 767px) {
-  .button-component {
-    width: 90%;
-    margin: 0 auto;
-    margin-bottom: 1rem;
-  }
-
+@media screen and (max-width: 768px) {
   .button-component.center {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 1.5rem;
+    width: 10.125rem;
   }
 
   .main-button {
@@ -57,3 +61,23 @@
     margin: 0.25rem 0 0;
   }
 }
+
+/*@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .button-component.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 10.125rem;
+  }
+
+  .main-button {
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    width: 150px;
+  }
+
+  .icon {
+    margin: 0.25rem 0 0;
+  }
+} */
