@@ -2,7 +2,7 @@
 
 Repositório criado para realizar o desafio de front-end do Front-end Mentor.
 
-## Table of contents
+## Guia
 
 - [Descrição](#descrição)
 
