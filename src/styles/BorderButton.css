@@ -1,0 +1,28 @@
+.border-button {
+  padding: 0.25rem 1rem;
+  gap: 0.5rem;
+  border: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  font-weight: var(--fw-semibold);
+  cursor: pointer;
+  position: relative;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.325);
+}
+
+.s-light-button {
+  background: hsl(var(--neutral-white));
+}
+
+.s-light-button:hover {
+  background: #d3d2d2;
+}
+
+.s-dark-button {
+  background: hsl(var(--neutral-dm-dark-blue));
+  color: hsl(var(--neutral-lm-very-light-gray));
+}
+
+.s-dark-button:hover {
+  background: #424d57;
+}
