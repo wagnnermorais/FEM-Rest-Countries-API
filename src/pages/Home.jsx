@@ -13,7 +13,9 @@ import PageUp from "../components/PageUp";
 
 const Home = () => {
   const { visibleRows, handleLoadMore, handleLoadLess } = useLoadCountries(2);
-  const initialDarkMode = localStorage.getItem("isDarkMode") === "true";
+  const colorScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const initialDarkMode =
+    localStorage.getItem("isDarkMode") === "true" || colorScheme;
   const { isDarkMode, toggleDarkMode } = useDarkMode(initialDarkMode);
   const [searchValue, setSearchValue] = useState("");
   const [selectedContinent, setSelectedContinent] = useState(null);

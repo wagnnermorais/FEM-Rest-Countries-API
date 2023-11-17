@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 
 const useDarkMode = () => {
+  const colorScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
   const [isDarkMode, setIsDarkMode] = useState(
-    localStorage.getItem("isDarkMode") === "true"
+    localStorage.getItem("isDarkMode") === "true" || colorScheme
   );
 
   useEffect(() => {
