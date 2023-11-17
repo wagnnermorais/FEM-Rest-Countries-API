@@ -61,23 +61,3 @@
     margin: 0.25rem 0 0;
   }
 }
-
-/*@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .button-component.center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    width: 10.125rem;
-  }
-
-  .main-button {
-    font-size: 1rem;
-    padding: 0.5rem 0;
-    width: 150px;
-  }
-
-  .icon {
-    margin: 0.25rem 0 0;
-  }
-} */
