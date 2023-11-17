@@ -1,17 +1,20 @@
-import { useState } from "react";
+import { useAppState } from "../utils/AppStateContext";
 
-export function useLoadCountries(initialValue = 2, minVisible = 2) {
-  const [visibleRows, setVisibleRows] = useState(initialValue);
+export function useLoadCountries() {
+  const { state, dispatch } = useAppState();
 
   const handleLoadMore = () => {
-    setVisibleRows((prevVisibleRows) => prevVisibleRows + 2);
+    dispatch({
+      type: "SET_VISIBLE_ROWS",
+      payload: state.visibleRows + 2,
+    });
   };
 
   const handleLoadLess = () => {
-    if (visibleRows - 2 >= minVisible) {
-      setVisibleRows((prevVisibleRows) => prevVisibleRows - 2);
+    if (state.visibleRows - 2 >= 2) {
+      dispatch({ type: "SET_VISIBLE_ROWS", payload: state.visibleRows - 2 });
     }
   };
 
-  return { visibleRows, handleLoadMore, handleLoadLess };
+  return { visibleRows: state.visibleRows, handleLoadMore, handleLoadLess };
 }

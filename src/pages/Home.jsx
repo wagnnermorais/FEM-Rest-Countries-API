@@ -8,11 +8,14 @@ import { useLoadCountries } from "../hooks/useLoadCountries";
 import useDarkMode from "../hooks/useDarkMode";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useAppState } from "../utils/AppStateContext";
 import "../styles/Home.css";
 import PageUp from "../components/PageUp";
+import PageTransition from "../components/PageTransition";
 
 const Home = () => {
-  const { visibleRows, handleLoadMore, handleLoadLess } = useLoadCountries(2);
+  const { state, dispatch } = useAppState();
+  const { handleLoadMore, handleLoadLess } = useLoadCountries();
   const colorScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
   const initialDarkMode =
     localStorage.getItem("isDarkMode") === "true" || colorScheme;
@@ -41,79 +44,90 @@ const Home = () => {
     });
 
   return (
-    <div
-      className={`container ${isDarkMode ? "dark-mode" : "light-container"}`}
-    >
-      <Header toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
-      <div className="input-box home-wrapper">
-        <div className="filters-box">
-          <div className="search-input-box">
-            <FontAwesomeIcon
-              icon={faMagnifyingGlass}
-              size="xl"
-              color={
-                isDarkMode
-                  ? "hsl(var(--neutral-white)"
-                  : "hsl(var(--neutral-lm-dark-gray)"
-              }
-              className="mag-icon"
-            />
-            <input
-              type="text"
-              placeholder="Search for a country..."
-              className={isDarkMode ? "s-dark-input" : "s-light-input"}
-              value={searchValue}
-              onChange={(e) => setSearchValue(e.target.value)}
-            />
+    <PageTransition>
+      <div
+        className={`container ${isDarkMode ? "dark-mode" : "light-container"}`}
+      >
+        <Header toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
+        <div className="input-box home-wrapper">
+          <div className="filters-box">
+            <div className="search-input-box">
+              <FontAwesomeIcon
+                icon={faMagnifyingGlass}
+                size="xl"
+                color={
+                  isDarkMode
+                    ? "hsl(var(--neutral-white)"
+                    : "hsl(var(--neutral-lm-dark-gray)"
+                }
+                className="mag-icon"
+              />
+              <input
+                type="text"
+                placeholder="Search for a country..."
+                className={isDarkMode ? "s-dark-input" : "s-light-input"}
+                value={searchValue}
+                onChange={(e) => setSearchValue(e.target.value)}
+              />
+            </div>
+            <div className="filter">
+              <Filter
+                title={"Filter by Region"}
+                items={[
+                  "All",
+                  "Africa",
+                  "America",
+                  "Asia",
+                  "Europe",
+                  "Oceania",
+                ]}
+                selectedContinent={selectedContinent}
+                setSelectedContinent={setSelectedContinent}
+              />
+            </div>
           </div>
-          <div className="filter">
-            <Filter
-              title={"Filter by Region"}
-              items={["All", "Africa", "America", "Asia", "Europe", "Oceania"]}
-              selectedContinent={selectedContinent}
-              setSelectedContinent={setSelectedContinent}
-            />
-          </div>
-        </div>
-        <div className="countries-container">
-          <div className="home-wrapper">
-            <div className="container-grid">
-              {filteredCountries.slice(0, visibleRows * 4).map((country) => (
-                <div key={country.name} className="country-container">
-                  <Container
-                    flag={country.flags.svg}
-                    alt={`${country.name} Flag`}
-                    title={country.name}
-                    population={country.population}
-                    region={country.region}
-                    capital={country.capital}
-                  />
-                </div>
-              ))}
+          <div className="countries-container">
+            <div className="home-wrapper">
+              <div className="container-grid">
+                {filteredCountries
+                  .slice(0, state.visibleRows * 4)
+                  .map((country) => (
+                    <div key={country.name} className="country-container">
+                      <Container
+                        flag={country.flags.svg}
+                        alt={`${country.name} Flag`}
+                        title={country.name}
+                        population={country.population}
+                        region={country.region}
+                        capital={country.capital}
+                      />
+                    </div>
+                  ))}
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div className="button-box">
-        <Button
-          onClick={handleLoadMore}
-          text={"Load more"}
-          isDarkMode={isDarkMode}
-          margin="1rem 0"
-          padding=".5rem 2rem"
-        />
-        {visibleRows > 2 && (
+        <div className="button-box">
           <Button
-            onClick={handleLoadLess}
-            text={"Load less"}
+            onClick={() => handleLoadMore(dispatch)}
+            text={"Load more"}
+            isDarkMode={isDarkMode}
             margin="1rem 0"
             padding=".5rem 2rem"
-            isDarkMode={isDarkMode}
           />
-        )}
+          {state.visibleRows > 2 && (
+            <Button
+              onClick={() => handleLoadLess(dispatch)}
+              text={"Load less"}
+              margin="1rem 0"
+              padding=".5rem 2rem"
+              isDarkMode={isDarkMode}
+            />
+          )}
+        </div>
+        <PageUp />
       </div>
-      <PageUp />
-    </div>
+    </PageTransition>
   );
 };
 
