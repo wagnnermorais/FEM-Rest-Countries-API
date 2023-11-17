@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import useDarkMode from "../hooks/useDarkMode";
 import Button from "../components/Button";
 import "../styles/Details.css";
+import BorderButton from "../components/BorderButton";
 
 const Details = () => {
   const navigate = useNavigate();
@@ -104,7 +105,7 @@ const Details = () => {
             </div>
           </div>
           <div className="border-countries-container">
-            <div className="bts">
+            <div className="border-countries-title">
               <p className="border-country-title">Border Countries:</p>
             </div>
             <div className="borders">
@@ -118,22 +119,15 @@ const Details = () => {
                       to={`/details/${borderCountry.name}`}
                       className="no-style-link"
                     >
-                      <Button
+                      <BorderButton
                         text={borderCountry.nativeName}
                         isDarkMode={isDarkMode}
-                        margin={"0 .5rem 0 0"}
-                        padding={".25rem 1rem"}
                       />
                     </Link>
                   </div>
                 ))
               ) : (
-                <Button
-                  text={"No borders"}
-                  isDarkMode={isDarkMode}
-                  margin={"0 .5rem 0 0"}
-                  padding={".25rem 1rem"}
-                />
+                <BorderButton text={"No borders"} isDarkMode={isDarkMode} />
               )}
             </div>
           </div>
