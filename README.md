@@ -38,8 +38,8 @@ Um aplicativo para fazer uma integração com o **[REST Countries API](https://r
 
 ## Links
 
-- URL do site em produção: <https://fem-rest-countries-api-two.vercel.app/>
-- URL do Frontend Mentor: <https://www.frontendmentor.io/solutions/rest-countries-api-with-color-theme-switcher-MlQpJKmR-->
+- URL do site em produção: https://fem-rest-countries-api-two.vercel.app
+- URL do Frontend Mentor: https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca
 
 ## Funcionalidades
 
